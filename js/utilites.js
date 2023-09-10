@@ -1,16 +1,19 @@
 function animate(){
   ctx3.clearRect(9,0, canvas.width, canvas.height);
   ctx2.drawImage(background_lvl2, 0, 0, canvas.width, canvas.height)
- 
-  frogger.draw();
-  frogger.update();
+
+
   handleParticles()
   handleRiples()
+  frogger.draw();
+  frogger.update();
+ requestAnimationFrame(animate);
+
   handleObstacles();
   handlScoreBoard()
-  ctx4.drawImage(grass, 0, 0, canvas.width, canvas.height)
+   ctx4.drawImage(grass, 0, 0, canvas.width, canvas.height)
   frame++;
-  requestAnimationFrame(animate);
+ 
 }
 
 animate();
